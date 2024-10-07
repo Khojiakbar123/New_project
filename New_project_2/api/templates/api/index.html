@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+<h1>Hello DRF</h1>
+{% for book in books %}
+<fieldset>
+    <h4>{{book.author}}: {{book.title}}</h4>
+    <p>{{book.created_at}}</p>
+    <a href="{% url 'detail' book.pk %}">More</a>
+</fieldset>
+<br>
+{% endfor %}
+</body>
+</html>
